@@ -1,4 +1,4 @@
-# funcoes-numericas-em-php
+# funcões numéricas em PHP
 Algumas funções nativas do PHP para manipulações de números.
 
 * round: Arredonda um float
