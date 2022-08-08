@@ -57,6 +57,57 @@ echo '<hr>';
 echo '<h2> 7 - abs </h2>';
 $valor = -10;
 $resultado = abs($valor);
-// O valor absoluto de number. Se o argumento número é do tipo float, o número retornado também é float, em outro caso será inteiro (mas poderá retornar float se o resultado tiver magnitude maior que inteiro).
-echo "<pre>"; print_r($valor); echo "</pre>";
-echo "<pre>"; print_r($resultado); echo "</pre>";
+// O valor absoluto de valor. Se o argumento número é do tipo float, o número retornado também é float, em outro caso será inteiro (mas poderá retornar float se o resultado tiver magnitude maior que inteiro).
+echo "<pre>"; print_r("valor: ".$valor); echo "</pre>";
+echo "<pre>"; print_r("Resultado: ".$resultado); echo "</pre>";
+
+echo '<h1>Funções matemáticas - Parte 2</h1>';
+
+echo '<hr>';
+echo '<h2> 8 - pow </h2>';
+$valor = 2;
+$potencia = 8;
+$resultado = pow($valor, $potencia);
+// Retorna a base elevada ao expoente. Esta função converterá todos os tipos para números, mesmo valores não escalares, o que pode levar a resultados esquisitos.
+echo "<pre>"; print_r("valor: ".$valor); echo "</pre>";
+echo "<pre>"; print_r("potencia: ".$potencia); echo "</pre>";
+echo "<pre>"; print_r("Resultado: ".$resultado); echo "</pre>";
+
+
+echo '<hr>';
+echo '<h2> 9 - sqrt </h2>';
+$valor = 16;
+$resultado = sqrt($valor);
+// Retorna a raiz quadrada. Ou o valor especial NAN para números negativos. 
+echo "<pre>"; print_r("valor: ".$valor); echo "</pre>";
+echo "<pre>"; print_r("Resultado: ".$resultado); echo "</pre>";
+
+
+echo '<hr>';
+echo '<h2> 10 - pi </h2>';
+$resultado = pi();
+// Retorna uma aproximação de pi. O retornado float tem uma precisão baseado na diretiva precision no php.ini, onde o padrão é 14. O valor de pi como float.
+echo "<pre>"; print_r("Resultado: ".$resultado); echo "</pre>";
+
+
+echo '<hr>';
+echo '<h2> 11 - Decimal p/ binario </h2>';
+$decbin = decbin(9);
+// Retorna uma string contendo a representação binária do parâmetro number.
+echo "<pre>"; print_r("Convertendo 9 para binario:"); echo "</pre>";
+echo "<pre>"; print_r("Resultado: ".$decbin); echo "</pre>";
+
+
+echo '<hr>';
+echo '<h2> 12 - Binário p/ Decimal </h2>';
+$bindec = bindec(1001);
+// Retorna o equivalente decimal do número binário representado pelo argumento. converte um número binário em um integer ou, se precisar por questão de tamanho, float.
+echo "<pre>"; print_r("Convertendo 1001 para decimal:"); echo "</pre>";
+echo "<pre>"; print_r("Resultado: ".$bindec); echo "</pre>";
+
+echo '<hr>';
+echo '<h2> 13 - Decimal p/ hexadecimal </h2>';
+$dechex = dechex(15);
+// Retorna uma string contendo a representação hexadecimal do argumento number. O maior número que pode ser convertido é 4294967295 em decimal, resultando em "ffffffff".echo "<pre>"; print_r("Convertendo 11 para hexadecimal:"); echo "</pre>";
+echo "<pre>"; print_r("Convertendo 15 para decimal:"); echo "</pre>";
+echo "<pre>"; print_r("Resultado: ".$dechex); echo "</pre>";
